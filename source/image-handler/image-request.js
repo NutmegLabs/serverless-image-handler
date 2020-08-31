@@ -241,7 +241,7 @@ class ImageRequest {
         const path = event["path"];
         if (path !== undefined) {
             // Eat the leading "/"
-            const encoded = path.slice(1);
+            const encoded = path[0] === "/" ? path.slice(1) : path;
             const toBuffer = Buffer.from(encoded, 'base64');
             try {
                 // To support European characters, 'ascii' was removed.
