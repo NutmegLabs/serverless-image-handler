@@ -53,15 +53,12 @@ exports.handler = async (event) => {
  * @param {boolean} isErr - has an error been thrown?
  */
 const getResponseHeaders = (isErr) => {
-    const corsEnabled = (process.env.CORS_ENABLED === "Yes");
     const headers = {
         "Access-Control-Allow-Methods": "GET",
         "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        "Access-Control-Allow-Credentials": true
+        "Access-Control-Allow-Origin": "*"
     }
-    if (corsEnabled) {
-        headers["Access-Control-Allow-Origin"] = process.env.CORS_ORIGIN;
-    }
+    
     if (isErr) {
         headers["Content-Type"] = "application/json"
     }
