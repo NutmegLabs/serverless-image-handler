@@ -26,7 +26,7 @@ async function testImageProcessing() {
   try {
     // Create the event object that mimics API Gateway
     const event = {
-      path: "/eyJidWNrZXQiOiJudG1nLW1lZGlhIiwia2V5IjoiZDQ4MDJkYjgtNDU2Ni01N2Q3LTlmNzQtNWY4MzU1MjhmMmY2L3R1dC9mNmI4YmZmOC1lYzAzLTQ1YzEtYTdkNS00N2MyYWYxNzZlYTkuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7ImhlaWdodCI6ODAwLCJmaXQiOiJjb3ZlciJ9fX0=",
+      path: "/eyJidWNrZXQiOiJudG1nLW1lZGlhIiwia2V5IjoiOTE3ZGE5NzEtZDRjNS01NTQyLWJiNzUtMTM1MTM2YjczYTJhL3R1dC83ZjhiOTdkNy1kMWM3LTQ1ZWUtYTA0Ni0zOGRhNWFiYjE5MGMucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJmaXQiOiJjb3ZlciJ9fX0=",
       headers: {
         Accept: "image/webp,image/jpeg", // Test WebP support
       },

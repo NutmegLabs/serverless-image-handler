@@ -47,6 +47,8 @@ class ImageHandler {
             edits.resize.fit = 'inside';
         }
 
+        edits.resize.withoutEnlargement = true;
+
         const image = sharp(originalImage, { failOnError: false });
         const metadata = await image.metadata();
         const keys = Object.keys(edits);
