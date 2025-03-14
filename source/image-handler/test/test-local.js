@@ -28,7 +28,8 @@ async function testImageProcessing() {
     const event = {
       path: "/eyJidWNrZXQiOiJudG1nLW1lZGlhIiwia2V5IjoiOTE3ZGE5NzEtZDRjNS01NTQyLWJiNzUtMTM1MTM2YjczYTJhL3R1dC83ZjhiOTdkNy1kMWM3LTQ1ZWUtYTA0Ni0zOGRhNWFiYjE5MGMucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJmaXQiOiJjb3ZlciJ9fX0=",
       headers: {
-        Accept: "image/webp,image/jpeg", // Test WebP support
+        // "X-WebP-Supported": "true",
+        "X-WebP-Supported": "false",
       },
     };
 

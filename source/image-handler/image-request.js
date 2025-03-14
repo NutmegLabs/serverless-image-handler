@@ -288,7 +288,7 @@ class ImageRequest {
     */
     getOutputFormat(event) {
         const autoWebP = true;
-        if (autoWebP && event.headers.Accept && event.headers.Accept.includes('image/webp')) {
+        if (autoWebP && event.headers['X-WebP-Supported'] && event.headers['X-WebP-Supported'].toLowerCase() === 'true') {
             return 'webp';
         } else if (this.requestType === 'Default') {
             const decoded = this.decodeRequest(event);
